@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "git push origin master & git push heroku master"
+    "deploy": "git push origin develop & git push heroku develop"
   },
   "repository": {
     "type": "git",

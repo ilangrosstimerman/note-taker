@@ -1,17 +1,23 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "A note taking application",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "git push origin master & git push heroku master"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ilantimerman/note-taker"
+    "url": "git+https://github.com/ilantimerman/note-taker"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ilantimerman/note-taker/issues"
+  },
+  "homepage": "https://github.com/ilantimerman/note-taker#readme",
   "dependencies": {
     "express": "^4.17.3"
   }

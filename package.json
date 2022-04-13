@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ilantimerman/note-taker#readme",
   "dependencies": {
+    "ajax": "^0.0.4",
     "express": "^4.17.3"
   }
 }

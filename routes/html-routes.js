@@ -12,9 +12,9 @@ app.use(express.static('routes'));
 
 module.exports = function(app) {
   app.get('*', function(req, res) {
-    response.sendFile(path.join(__dirname, './public/index.html'));
+    response.sendFile(path.join(__dirname, '../public/index.html'));
   });
   app.get('/notes', function(req, res) {
-    response.sendFile(path.join(__dirname, './public/notes.html'));
+    response.sendFile(path.join(__dirname, '../public/notes.html'));
   });
 }

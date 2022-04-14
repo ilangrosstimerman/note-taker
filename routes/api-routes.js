@@ -13,12 +13,12 @@ app.use(express.static('routes'));
 module.exports = function(app) {
 
     app.get('/api/notes', function (req, res) {
-    return response.json(JSON.parse(fs.readFileSync('../db/db.json')));
+    return response.json(JSON.parse(fs.readFileSync('./db/db.json')));
   });
   
   app.post('/api/notes', function(req, res) {
     let newNote = req.body;
-    let dbNotes = JSON.parse(fs.readFileSync('../db/db.json'));
+    let dbNotes = JSON.parse(fs.readFileSync('./db/db.json'));
     let id = 1;
     while(dbNotes.some(function(value, index) {
       return value.id === id
@@ -27,7 +27,7 @@ module.exports = function(app) {
     }
     newNote.id = id;
     dbNotes.push(newNote);
-    fs.writeFileSync('../db/db.json', JSON.stringify(dbNotes));
+    fs.writeFileSync('./db/db.json', JSON.stringify(dbNotes));
     res.json(newNote);
   });
 
@@ -37,7 +37,7 @@ module.exports = function(app) {
     dbNotes = dbNotes.filter(function(note) {
       return note.id !== id
     });
-    fs.writeFileSync('../db/db.json', JSON.stringify(dbNotes));
+    fs.writeFileSync('./db/db.json', JSON.stringify(dbNotes));
     res.json(dbNotes);
   });
 }
